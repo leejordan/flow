@@ -1,0 +1,99 @@
+.flow-family-tree {
+	box-sizing: border-box;
+	outline: none;
+	margin: 0;
+	padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+	
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+	ul {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		position: relative;
+		padding: 1em 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 1em;
+			left: 50%;
+			height: 1em;
+			border-left: 3px solid black;
+		}
+	}
+
+	> ul {
+		padding: 0;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		padding: 3em 1em 0 1em;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1em;
+			width: 100%;
+			border-top: 3px solid black;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 1em;
+			left: 50%;
+			height: 1em;
+			border-left: 3px solid black;
+		}
+
+		&:first-child {
+			&:before {
+				left: 50%;
+				width: 50%;
+			}
+		}
+
+		&:last-child {
+			&:before {
+				right: 50%;
+				width: 50%;
+			}
+		}
+
+		&:only-child {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	> li {
+		padding: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}
