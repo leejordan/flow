@@ -1,8 +1,303 @@
-.flow *,
-.flow *::after,
-.flow *::before {
+.flow-family-tree {
   box-sizing: border-box;
   outline: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.flow-family-tree *,
+.flow-family-tree *::after,
+.flow-family-tree *::before {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-family-tree ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  padding: 1em 0;
+}
+
+.flow-family-tree ul:after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  height: 1em;
+  border-left: 3px solid black;
+}
+
+.flow-family-tree > ul {
+  padding: 0;
+}
+
+.flow-family-tree li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 3em 1em 0 1em;
+}
+
+.flow-family-tree li:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  width: 100%;
+  border-top: 3px solid black;
+}
+
+.flow-family-tree li:after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  height: 1em;
+  border-left: 3px solid black;
+}
+
+.flow-family-tree li:first-child:before {
+  left: 50%;
+  width: 50%;
+}
+
+.flow-family-tree li:last-child:before {
+  right: 50%;
+  width: 50%;
+}
+
+.flow-family-tree li:only-child:before {
+  display: none;
+}
+
+.flow-family-tree > li {
+  padding: 0;
+}
+
+.flow-family-tree > li:before, .flow-family-tree > li:after {
+  display: none;
+}
+
+.flow-dendrogram {
+  box-sizing: border-box;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.flow-dendrogram *,
+.flow-dendrogram *::after,
+.flow-dendrogram *::before {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-dendrogram ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+}
+
+.flow-dendrogram ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: .5em;
+  width: 1em;
+  border-top: 3px solid black;
+}
+
+.flow-dendrogram > ul {
+  padding: 0;
+}
+
+.flow-dendrogram li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: .5em 1em .5em 3em;
+}
+
+.flow-dendrogram li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+  height: 100%;
+  border-left: 3px solid black;
+}
+
+.flow-dendrogram li:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1.5em;
+  width: 1em;
+  border-top: 3px solid black;
+}
+
+.flow-dendrogram li:first-child:before {
+  top: 50%;
+  height: 50%;
+}
+
+.flow-dendrogram li:last-child:before {
+  bottom: 50%;
+  height: 50%;
+}
+
+.flow-dendrogram li:only-child:before {
+  display: none;
+}
+
+.flow-dendrogram > li {
+  padding: 0;
+}
+
+.flow-dendrogram > li:before, .flow-dendrogram > li:after {
+  display: none;
+}
+
+.flow-decision-tree {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.flow-decision-tree *,
+.flow-decision-tree *::after,
+.flow-decision-tree *::before {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-decision-tree ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  padding: 0;
+}
+
+.flow-decision-tree ul:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 1em;
+  border-left: 3px solid black;
+}
+
+.flow-decision-tree > ul {
+  padding: 0;
+}
+
+.flow-decision-tree li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 2em 1em 0 1em;
+}
+
+.flow-decision-tree li:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  width: 100%;
+  border-top: 3px solid black;
+}
+
+.flow-decision-tree li:after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  height: 1em;
+  border-left: 3px solid black;
+}
+
+.flow-decision-tree li:first-child:before {
+  left: 50%;
+  width: 50%;
+}
+
+.flow-decision-tree li:last-child:before {
+  right: 50%;
+  width: 50%;
+}
+
+.flow-decision-tree li:only-child:before {
+  display: none;
+}
+
+.flow-decision-tree > li {
+  padding: 0;
+}
+
+.flow-decision-tree > li:before, .flow-decision-tree > li:after {
+  display: none;
+}
+
+.terminator {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  border-radius: 2vw;
+  background-color: #c9c9c9;
+}
+
+.process {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #c9c9c9;
+}
+
+.decision {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #c9c9c9;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
